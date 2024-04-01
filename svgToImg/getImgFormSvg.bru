@@ -1,0 +1,19 @@
+meta {
+  name: getImgFormSvg
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:3000/api/genImageFormSvg
+  body: multipartForm
+  auth: none
+}
+
+body:form-urlencoded {
+  : 
+}
+
+body:multipart-form {
+  text: @file(D:\Documents\Downloads\text.svg)
+}
