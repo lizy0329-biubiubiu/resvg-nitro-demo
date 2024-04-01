@@ -20,3 +20,7 @@ pnpm dev
 
 the image is gen in your rootDir.
 
+![image](https://github.com/lizy0329-biubiubiu/resvg-nitro-demo/assets/103976180/ee4fe2c2-dcc6-4d66-b34f-069b34df30f7)
+
+![image](https://github.com/lizy0329-biubiubiu/resvg-nitro-demo/assets/103976180/45a965c3-7f0e-4304-95ed-ada8f2199ef8)
+
