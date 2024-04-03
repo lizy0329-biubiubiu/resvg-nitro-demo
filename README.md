@@ -20,6 +20,34 @@ pnpm dev
 
 the image is gen in your rootDir.
 
+## How to gen poster form client
+
+```javascript
+// @cancidas/dom-to-svg was fixed the inlineResources error
+import {documentToSVG, elementToSVG, inlineResources} from '@cancidas/dom-to-svg';
+
+// html
+<div
+    id="poster-baba"
+>
+  <!-- render content -->
+</div>
+
+// script
+const svgDocument = elementToSVG(document.getElementById('poster-baba'));
+await inlineResources(svgDocument.documentElement);
+const svgString = new XMLSerializer().serializeToString(svgDocument);
+const blob = new Blob([svgString], {type: 'image/svg+xml'});
+
+const formData = new FormData();
+formData.append('file', blob, '测试demo');
+await fetch('http://localhost:3000/api/genImageFormSvg', {
+    method: 'POST',
+    body: formData
+});
+
+```
+
 ![image](https://github.com/lizy0329-biubiubiu/resvg-nitro-demo/assets/103976180/ee4fe2c2-dcc6-4d66-b34f-069b34df30f7)
 
 ![image](https://github.com/lizy0329-biubiubiu/resvg-nitro-demo/assets/103976180/45a965c3-7f0e-4304-95ed-ada8f2199ef8)

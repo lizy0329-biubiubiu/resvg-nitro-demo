@@ -16,10 +16,13 @@ export default eventHandler(async (event) => {
                 },
                 font: {
                     fontFiles: [
-                        join(__dirname, 'server/public/shijuef-Regular.ttf'),
+                        join(
+                            __dirname,
+                            'server/public/SourceHanSansCN-Regular.otf'
+                        ),
                     ], // Load custom fonts.
                     loadSystemFonts: false, // It will be faster to disable loading system fonts.
-                    defaultFontFamily: 'shijuef.com(gongfanmianfeiti)', // You can omit this.
+                    defaultFontFamily: 'Source Han Sans CN',
                 },
                 logLevel: 'debug',
             });
